@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper  namespace="com.jnc.web.dao.orderinfo.IKunnrOrderLineDao">
+
+	<!--<resultMap type="KunnrOrderLineEntity" id="kunnrOrderResult">
+			<result	property="id"	column="id"	/>
+			<result	property="orderNo"	column="order_no"	/>
+			<result	property="orderLineNo"	column="order_line_no"	/>
+			<result	property="matnr"	column="matnr"	/>
+			<result	property="maktx"	column="maktx"	/>
+			<result	property="amount"	column="amount"	/>
+			<result	property="price"	column="price"	/>
+			<result	property="money"	column="money"	/>
+	</resultMap>-->
+
+    <!--使用uuid做主键时，必须显式指出useGeneratedKeys属性为false，否则会报: SQL 命令未正确结束；
+          若用序列自动生成主键ID时，则不需要指出-->
+    <insert id="saveOrderLineBatch" parameterType="java.util.List" useGeneratedKeys="false">
+        insert into third.kunnr_orderline (id,order_no,order_line_no,matnr,maktx,amount,price,money,status,create_by,create_date)
+        <foreach collection="list"  item="item" index="index" separator="union all">
+            select #{item.id}  id,
+            #{item.orderNo} orderNo,
+            #{item.orderLineNo} orderLineNo,
+            #{item.matnr} matnr,
+            #{item.maktx} maktx,
+            #{item.amount} amount,
+            #{item.price} price,
+            #{item.money} money,
+            #{item.status} status,
+			#{item.createBy} createBy,
+			sysdate createDate from dual
+        </foreach>
+    </insert>
+</mapper>
