@@ -1,7 +1,7 @@
-package com.justin.web.controller.userinfo;
+package com.justin.web.controller.system;
 
 import com.justin.web.controller.base.BaseController;
-import com.justin.web.service.userinfo.IUserInfoService;
+import com.justin.web.service.system.IUserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,5 +30,6 @@ public class UserInfoController extends BaseController {
 //        String string=JSONArray.toJSONString(userList);
         return "";
     }
+
 
 }

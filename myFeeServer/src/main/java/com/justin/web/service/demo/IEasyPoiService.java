@@ -1,4 +1,4 @@
-package com.justin.web.service.userinfo;
+package com.justin.web.service.demo;
 
 
 import com.justin.web.model.demo.EasyPoiDemo;

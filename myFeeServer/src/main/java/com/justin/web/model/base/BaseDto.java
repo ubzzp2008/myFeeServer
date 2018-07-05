@@ -32,10 +32,6 @@ public class BaseDto implements Serializable {
      * 最后修改时间
      */
     private Date updateDate;
-    /**
-     * 数据状态 009新增，004修改，003删除
-     */
-    private String status;
 
     public String getId() {
         return id;
@@ -77,11 +73,4 @@ public class BaseDto implements Serializable {
         this.updateDate = updateDate;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
 }

@@ -1,8 +1,8 @@
-package com.justin.web.controller.userinfo;
+package com.justin.web.controller.demo;
 
 import com.justin.web.controller.base.BaseController;
 import com.justin.web.model.demo.EasyPoiDemo;
-import com.justin.web.service.userinfo.IEasyPoiService;
+import com.justin.web.service.demo.IEasyPoiService;
 import com.justin.web.util.EasyPoiUtil;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,8 +1,8 @@
-package com.justin.web.service.userinfo.impl;
+package com.justin.web.service.impl.demo;
 
-import com.justin.web.dao.userinfo.IEasyPoiDao;
+import com.justin.web.dao.demo.IEasyPoiDao;
 import com.justin.web.model.demo.EasyPoiDemo;
-import com.justin.web.service.userinfo.IEasyPoiService;
+import com.justin.web.service.demo.IEasyPoiService;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

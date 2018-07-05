@@ -1,8 +1,8 @@
-package com.justin.web.service.userinfo;
+package com.justin.web.service.system;
 
 
-import com.justin.web.entity.userinfo.UserInfoEntity;
-import com.justin.web.model.userinfo.UserInfoDto;
+import com.justin.web.entity.system.UserInfoEntity;
+import com.justin.web.model.system.UserInfoDto;
 
 import java.util.List;
 

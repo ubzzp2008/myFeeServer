@@ -1,9 +1,9 @@
-package com.justin.web.service.userinfo.impl;
+package com.justin.web.service.impl.system;
 
-import com.justin.web.dao.userinfo.IUserInfoDao;
-import com.justin.web.entity.userinfo.UserInfoEntity;
-import com.justin.web.model.userinfo.UserInfoDto;
-import com.justin.web.service.userinfo.IUserInfoService;
+import com.justin.web.dao.system.IUserInfoDao;
+import com.justin.web.entity.system.UserInfoEntity;
+import com.justin.web.model.system.UserInfoDto;
+import com.justin.web.service.system.IUserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

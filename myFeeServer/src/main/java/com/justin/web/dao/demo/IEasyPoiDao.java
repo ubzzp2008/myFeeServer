@@ -1,4 +1,4 @@
-package com.justin.web.dao.userinfo;
+package com.justin.web.dao.demo;
 
 
 import com.justin.web.model.demo.EasyPoiDemo;
