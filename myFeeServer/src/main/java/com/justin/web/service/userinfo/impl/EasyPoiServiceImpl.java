@@ -1,10 +1,8 @@
-package com.jnc.web.service.userinfo.impl;
+package com.justin.web.service.userinfo.impl;
 
-import com.jnc.web.dao.userinfo.IEasyPoiDao;
-import com.jnc.web.model.demo.EasyPoiDemo;
-import com.jnc.web.service.userinfo.IEasyPoiService;
-import org.apache.ibatis.session.ExecutorType;
-import org.apache.ibatis.session.SqlSession;
+import com.justin.web.dao.userinfo.IEasyPoiDao;
+import com.justin.web.model.demo.EasyPoiDemo;
+import com.justin.web.service.userinfo.IEasyPoiService;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.jnc.web.entity.userinfo;
+package com.justin.web.entity.userinfo;
 
 /**
  * @version V0.1

@@ -1,12 +1,10 @@
-package com.jnc.web.model.demo;
+package com.justin.web.model.demo;
 
 import cn.afterturn.easypoi.excel.annotation.Excel;
 
 import java.io.Serializable;
 
-/** create table easy_poi_demo as
- *   select sys_guid() id,mandt,matnr,arktx maktx,sdkunnr kunnr from third.third_wlm where matnr in (
- *   select code from THIRD.TB_JS_DICTIONARIES where typename='matnrlarge' and notecode in ('JJNK6','JJNK9','JJNK6(15B)'));
+/**
  * @version V0.1
  * @项目名称：springBootDemo
  * @类名称：EasyPoiDemo

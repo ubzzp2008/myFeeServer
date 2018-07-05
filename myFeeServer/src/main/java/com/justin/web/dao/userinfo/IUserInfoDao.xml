@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper  namespace="com.jnc.web.dao.userinfo.IUserInfoDao">
+<mapper namespace="com.justin.web.dao.userinfo.IUserInfoDao">
 
-	<resultMap type="UserInfoEntity" id="userInfoResult">
-			<result	property="mandt"	column="mandt"	/>
-			<result	property="kunnr"	column="kunnr"	/>
-	</resultMap>
+    <resultMap type="UserInfoEntity" id="userInfoResult">
+        <result property="mandt" column="mandt"/>
+        <result property="kunnr" column="kunnr"/>
+    </resultMap>
 
-    <select id="queryAllUser" resultMap="userInfoResult"  parameterType="UserInfoDto">
-    <![CDATA[ select
+    <select id="queryAllUser" resultMap="userInfoResult" parameterType="UserInfoDto">
+        <![CDATA[
+         select
             mandt,
             kunnr
         from
             bsap.zzp_yzj where rownum<=50000 and rownum>0
-          ]]>
+
+        ]]>
     </select>
 </mapper>

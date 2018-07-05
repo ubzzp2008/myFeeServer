@@ -1,7 +1,7 @@
-package com.jnc.web.service.userinfo;
+package com.justin.web.service.userinfo;
 
-import com.jnc.web.entity.userinfo.UserInfoEntity;
-import com.jnc.web.model.demo.EasyPoiDemo;
+
+import com.justin.web.model.demo.EasyPoiDemo;
 
 import java.util.List;
 

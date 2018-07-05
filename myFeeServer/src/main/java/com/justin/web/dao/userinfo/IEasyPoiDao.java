@@ -1,6 +1,7 @@
-package com.jnc.web.dao.userinfo;
+package com.justin.web.dao.userinfo;
 
-import com.jnc.web.model.demo.EasyPoiDemo;
+
+import com.justin.web.model.demo.EasyPoiDemo;
 
 import java.util.List;
 

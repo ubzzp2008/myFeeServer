@@ -1,4 +1,4 @@
-package com.jnc.web.model.base;
+package com.justin.web.model.base;
 
 import java.io.Serializable;
 
@@ -10,7 +10,7 @@ import java.io.Serializable;
  * @创建人：justin
  * @创建时间：2018-05-03 15:46
  */
-public class AjaxJson implements Serializable{
+public class AjaxJson implements Serializable {
     /**
      * 成功与否标识
      */

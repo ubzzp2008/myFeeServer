@@ -1,13 +1,12 @@
-package com.jnc.web.controller.base;
+package com.justin.web.controller.base;
 
 import com.alibaba.fastjson.JSON;
-import com.jnc.web.model.base.AjaxJson;
+import com.justin.web.model.base.AjaxJson;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 /**
  * @version V0.1
@@ -27,9 +26,10 @@ public class BaseController {
      * @date：2018-05-04 11:43
      */
     public String returnJson(AjaxJson json) {
-        logger.info("返回的json格式："+JSON.toJSONString(json));
+        logger.info("返回的json格式：" + JSON.toJSONString(json));
         return JSON.toJSONString(json);
     }
+
     /**
      * 描述：返回json格式数据到前端页面
      *

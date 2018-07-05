@@ -1,9 +1,9 @@
-package com.jnc.web.service.userinfo.impl;
+package com.justin.web.service.userinfo.impl;
 
-import com.jnc.web.dao.userinfo.IUserInfoDao;
-import com.jnc.web.entity.userinfo.UserInfoEntity;
-import com.jnc.web.model.userinfo.UserInfoDto;
-import com.jnc.web.service.userinfo.IUserInfoService;
+import com.justin.web.dao.userinfo.IUserInfoDao;
+import com.justin.web.entity.userinfo.UserInfoEntity;
+import com.justin.web.model.userinfo.UserInfoDto;
+import com.justin.web.service.userinfo.IUserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

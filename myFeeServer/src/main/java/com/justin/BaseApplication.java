@@ -1,4 +1,4 @@
-package com.jnc;
+package com.justin;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 @EnableTransactionManagement
 @EnableScheduling
-@MapperScan("com.jnc.web.dao")
+@MapperScan("com.justin.web.dao")
 public class BaseApplication {
 
 	public static void main(String[] args) {

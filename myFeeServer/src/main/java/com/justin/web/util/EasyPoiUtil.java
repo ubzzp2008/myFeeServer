@@ -1,12 +1,10 @@
-package com.jnc.web.util;
+package com.justin.web.util;
 
 import cn.afterturn.easypoi.excel.ExcelExportUtil;
 import cn.afterturn.easypoi.excel.ExcelImportUtil;
 import cn.afterturn.easypoi.excel.entity.ExportParams;
 import cn.afterturn.easypoi.excel.entity.ImportParams;
 import cn.afterturn.easypoi.excel.entity.enmus.ExcelType;
-import cn.afterturn.easypoi.excel.export.ExcelExportServer;
-import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.slf4j.Logger;
@@ -34,41 +32,41 @@ public abstract class EasyPoiUtil {
 
 
     /**
-     * @desc：下载xls模板
-     * @author：justin
-     * @param list 空对象集合
-     * @param title 文件标题 可空
+     * @param list      空对象集合
+     * @param title     文件标题 可空
      * @param sheetName sheet名字 可空
      * @param pojoClass 实体对象
-     * @param fileName 文件名字 不能为空
+     * @param fileName  文件名字 不能为空
+     * @desc：下载xls模板
+     * @author：justin
      * @date：2018-05-10 13:59
      */
-    public static void templateXls(List<?> list,String title, String sheetName, Class<?> pojoClass, String fileName, HttpServletResponse response){
+    public static void templateXls(List<?> list, String title, String sheetName, Class<?> pojoClass, String fileName, HttpServletResponse response) {
         defaultExport(list, pojoClass, fileName, response, new ExportParams(title, sheetName));
     }
 
     /**
-     * @desc：下载xlsx模板
-     * @author：justin
-     * @param list 空对象集合
-     * @param title 文件标题 可空
+     * @param list      空对象集合
+     * @param title     文件标题 可空
      * @param sheetName sheet名字 可空
      * @param pojoClass 实体对象
-     * @param fileName 文件名字 不能为空
+     * @param fileName  文件名字 不能为空
+     * @desc：下载xlsx模板
+     * @author：justin
      * @date：2018-05-10 13:59
      */
-    public static void templateXlsx(List<?> list,String title, String sheetName, Class<?> pojoClass, String fileName, HttpServletResponse response){
+    public static void templateXlsx(List<?> list, String title, String sheetName, Class<?> pojoClass, String fileName, HttpServletResponse response) {
         defaultExport(list, pojoClass, fileName, response, new ExportParams(title, sheetName, ExcelType.XSSF));
     }
 
     /**
-     * @desc：导出xlsx文件
-     * @author：justin
-     * @param list 对象集合 不能为空
-     * @param title 文件标题 可空
+     * @param list      对象集合 不能为空
+     * @param title     文件标题 可空
      * @param sheetName sheet名字 可空
      * @param pojoClass 实体对象
-     * @param fileName 文件名字 不能为空
+     * @param fileName  文件名字 不能为空
+     * @desc：导出xlsx文件
+     * @author：justin
      * @date：2018-05-10 11:58
      */
     public static void exportExcelXlsx(List<?> list, String title, String sheetName, Class<?> pojoClass, String fileName, HttpServletResponse response) {
@@ -76,13 +74,13 @@ public abstract class EasyPoiUtil {
     }
 
     /**
-     * @desc：默认导出为xls的格式
-     * @author：justin
-     * @param list 对象集合 不能为空
-     * @param title 文件标题 可空
+     * @param list      对象集合 不能为空
+     * @param title     文件标题 可空
      * @param sheetName sheet名字 可空
      * @param pojoClass 实体对象
-     * @param fileName 文件名字 不能为空
+     * @param fileName  文件名字 不能为空
+     * @desc：默认导出为xls的格式
+     * @author：justin
      * @date：2018-05-10 11:57
      */
     public static void exportExcelXls(List<?> list, String title, String sheetName, Class<?> pojoClass, String fileName, HttpServletResponse response) {

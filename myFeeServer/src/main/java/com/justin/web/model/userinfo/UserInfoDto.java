@@ -1,4 +1,4 @@
-package com.jnc.web.model.userinfo;
+package com.justin.web.model.userinfo;
 
 /**
  * @version V0.1

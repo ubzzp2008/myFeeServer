@@ -1,4 +1,4 @@
-package com.jnc.web.model.base;
+package com.justin.web.model.base;
 
 import java.io.Serializable;
 import java.util.Date;
