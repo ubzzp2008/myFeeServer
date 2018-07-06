@@ -28,7 +28,7 @@ public class UserInfoDto extends BaseDto {
      */
     private String phone;
     /**
-     * 性别
+     * 性别 0:女；1:男
      */
     private String sex;
 

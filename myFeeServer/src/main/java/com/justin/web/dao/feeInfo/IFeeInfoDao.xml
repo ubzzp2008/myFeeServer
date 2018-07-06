@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.justin.web.dao.feeInfo.IFeeInfoDao">
+
+    <resultMap type="FeeInfoDto" id="feeInfoResult">
+        <result property="id" column="ID"/>
+        <result property="feeType" column="fee_type"/>
+        <result property="useDate" column="use_date"/>
+        <result property="money" column="money"/>
+        <result property="useContent" column="use_content"/>
+        <result property="note" column="note"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createDate" column="create_date"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateDate" column="update_date"/>
+
+        <result property="createDateStr" column="createDateStr"/>
+    </resultMap>
+
+    <!-- 	保存费用信息-->
+    <insert id="saveFeeInfo" parameterType="FeeInfoEntity">
+		INSERT INTO  t_fee_info
+		(
+			id,
+			fee_type,
+            use_date,
+            money,
+            use_content,
+            note,
+			create_by,
+			create_date
+		) VALUES (
+			#{id},
+			#{feeType},
+			#{useDate},
+			#{money},
+			#{useContent},
+			#{note},
+			#{createBy},
+			#{createDate}
+		)
+	</insert>
+
+    <!--手机端获取费用明细-->
+    <select id="queryFeeInfoList" resultMap="feeInfoResult" parameterType="FeeInfoDto">
+        select
+        id,
+        fee_type,
+        use_date,
+        money,
+        use_content,
+        note,
+        create_by,
+        create_date,
+        date_format(create_date,'%Y-%m-%d %H:%i:%s') createDateStr,
+        update_by,
+        update_date
+        from t_fee_info
+        <where>
+            <if test="feeType!=null">
+                and fee_type = #{feeType}
+            </if>
+            <if test="createBy!=null">
+                and create_by = #{createBy}
+            </if>
+        </where>
+        order by create_date desc
+    </select>
+
+    <!--手机端获取费用总金额-->
+    <select id="findFeeTotal" resultType="java.math.BigDecimal" parameterType="FeeInfoDto">
+        select
+        sum(money) money
+        from t_fee_info
+        <where>
+            <if test="feeType!=null">
+                and fee_type = #{feeType}
+            </if>
+            <if test="createBy!=null">
+                and create_by = #{createBy}
+            </if>
+        </where>
+        order by create_date desc
+    </select>
+
+</mapper>

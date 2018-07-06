@@ -15,6 +15,26 @@ import java.util.List;
  * @创建时间：2018-04-24 17:35
  */
 public interface IUserInfoDao {
+    /**
+     * @desc：用户登录
+     * @author：justin
+     * @date：2018-07-05 10:16
+     */
+    public UserInfoDto login(UserInfoDto user);
+
+    /**
+     * @desc：根据用户名检查用户名是否已经被占用
+     * @author：justin
+     * @date：2018-07-05 15:49
+     */
+    public Integer checkUserExist(String userName);
+
+    /**
+     * @desc：保存用户信息
+     * @author：justin
+     * @date：2018-07-05 15:50
+     */
+    public void saveUserInfo(UserInfoEntity user);
 
     public List<UserInfoEntity> queryAllUser(UserInfoDto user);
 }
