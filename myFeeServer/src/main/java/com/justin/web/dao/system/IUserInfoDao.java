@@ -36,5 +36,10 @@ public interface IUserInfoDao {
      */
     public void saveUserInfo(UserInfoEntity user);
 
-    public List<UserInfoEntity> queryAllUser(UserInfoDto user);
+    /**
+     * @desc：获取所有用户信息
+     * @author：justin
+     * @date：2018-07-06 15:58
+     */
+    public List<UserInfoDto> queryUserInfoList(UserInfoDto user);
 }

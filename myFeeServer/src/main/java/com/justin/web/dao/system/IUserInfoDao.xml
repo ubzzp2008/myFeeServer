@@ -85,20 +85,14 @@
         )
     </insert>
 
-    <select id="queryAllUser" resultMap="userInfoResult" parameterType="UserInfoDto">
-        <![CDATA[
-
-
-
-         select
-            mandt,
-            kunnr
-        from
-            bsap.zzp_yzj where rownum<=50000 and rownum>0
-
-
-
-
-        ]]>
+    <select id="queryUserInfoList" resultMap="userInfoResult" parameterType="UserInfoDto">
+        SELECT
+        id,
+        username,
+        realname,
+        phone,
+        case when sex='1' then '男' when sex='0' then '女' else '' end as sex
+        FROM
+        t_user_info
     </select>
 </mapper>

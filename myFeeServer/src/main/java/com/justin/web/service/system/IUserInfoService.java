@@ -22,8 +22,6 @@ public interface IUserInfoService {
      */
     public UserInfoDto login(UserInfoDto user);
 
-    public List<UserInfoEntity> queryAllUser(UserInfoDto user);
-
     /**
      * @desc：根据用户名检查用户名是否已经被占用
      * @author：justin
@@ -37,4 +35,11 @@ public interface IUserInfoService {
      * @date：2018-07-05 15:50
      */
     public void saveUserInfo(UserInfoEntity user);
+
+    /**
+     * @desc：获取所有用户信息
+     * @author：justin
+     * @date：2018-07-06 15:58
+     */
+    public List<UserInfoDto> queryUserInfoList(UserInfoDto user);
 }

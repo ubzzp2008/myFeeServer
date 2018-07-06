@@ -34,11 +34,6 @@ public class UserInfoServiceImpl implements IUserInfoService {
     }
 
     @Override
-    public List<UserInfoEntity> queryAllUser(UserInfoDto user) {
-        return userInfoDao.queryAllUser(user);
-    }
-
-    @Override
     public Integer checkUserExist(String userName) {
         return userInfoDao.checkUserExist(userName);
     }
@@ -50,5 +45,10 @@ public class UserInfoServiceImpl implements IUserInfoService {
         user.setCreateBy(user.getUserName());
         user.setCreateDate(new Date());
         userInfoDao.saveUserInfo(user);
+    }
+
+    @Override
+    public List<UserInfoDto> queryUserInfoList(UserInfoDto user) {
+        return userInfoDao.queryUserInfoList(user);
     }
 }
